@@ -93,7 +93,8 @@
 -(SFSafariViewController*)sfController:(NSString*)url withEntersReaderIfAvailable:(BOOL)entersReaderIfAvailable
 {
     if(_sfController == nil){
-        _sfController = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] entersReaderIfAvailable:entersReaderIfAvailable];
+        NSCharacterSet *urlCharSet = [[NSCharacterSet characterSetWithCharactersInString:@" %<>[\]^`{|}"] invertedSet];
+        _sfController = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:[url stringByAddingPercentEncodingWithAllowedCharacters:urlCharSet]] entersReaderIfAvailable:entersReaderIfAvailable];
         _sfController.delegate = self;
     }
     
