@@ -59,7 +59,7 @@ properties:
     osver: {ios: {min: "9.0"}}
     deprecated:
         since: "6.3.0"
-        notes: Use the <Modules.SafariDialog.isSupported> method instead.
+        notes: Use the [Modules.SafariDialog.isSupported](Modules.SafariDialog.isSupported) method instead.
     permission: read-only
 
   - name: opened
@@ -68,7 +68,7 @@ properties:
     osver: {ios: {min: "9.0"}}
     deprecated:
         since: "6.3.0"
-        notes: Use the <Modules.SafariDialog.isOpen> method instead.
+        notes: Use the [Modules.SafariDialog.isOpen](Modules.SafariDialog.isOpen) method instead.
     permission: read-only
 
   - name: DISMISS_BUTTON_STYLE_DONE
